@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /*
+      factorizacion
+      !6=6*5*4*3*2*1
+      caso base es el 1
+      guardamos resultado para no repetir ni retrabajar
+
+      */
+      function factorial(n){
+        if(!this.cache){
+          this.cache = {}//revisa si existe un cache
+        }
+        if(this.cache[n]){
+          return this.cache[n]
+        }
+        if(n===1){
+          return 1
+        }else{
+          this.cache[n]= n*factorial(n-1)
+          return this.cache[n]
+        }
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      /*
+      13/4
+      */
+      function  divisionEntera(dividendo, divisor){
+        if(dividendo<divisor){
+          return 0
+        }else{
+          return 1+ divisionEntera(dividendo - divisor,divisor)
+        }
+      }//recursividad refiere a una funcion que se llama si misma , reququiere un caso base que no la invoque y uno que si
+    </script>
+  </body>
+</html>

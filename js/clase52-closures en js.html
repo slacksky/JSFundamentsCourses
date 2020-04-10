@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function crearSaludo(finalDeFrase){//crea o generea otras funciones
+        return function(nombre){//funcion anonima, crea polimorfismo con la funciones de abajo
+          console.log(`Hola ${nombre} ${finalDeFrase}`)
+
+        }
+      }
+      const saludoArgentino = crearSaludo('che')
+      const saludoMexicano = crearSaludo('guey')
+      const saludoColombiano = crearSaludo('veci')
+
+      saludoArgentino('yasmin')
+      saludoMexicano('daniela')
+      saludoColombiano('anyela')
+    </script>
+  </body>
+</html>

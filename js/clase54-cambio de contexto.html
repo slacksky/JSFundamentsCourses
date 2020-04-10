@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const jorge = {
+        nombre:'Jorge',
+        apellido:'Vivas'
+      }
+
+      function saludar(saludo='hola'){//valor por defecto
+        console.log(`${saludo} mi nombre es ${this.nombre}`)
+      }
+
+      //metodo bind cambia el this de la function
+      //const saludarAJorge = saludar.bind(jorge)//el primer parametro es el contexto el resto es
+
+      //setTimeout(saludar.bind(jorge,'Que hubo'), 1000)
+
+      //saludar.call(jorge, 'Que Hubo')//llama la funcion en el contexto, bind solo la ata no la llama
+      saludar.apply(jorge, ['Que hubo'])//similar primaro es el contexto y los parametors entran por array
+
+
+    </script>
+
+  </body>
+</html>

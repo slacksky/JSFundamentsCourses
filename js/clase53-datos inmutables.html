@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const jorge ={
+        nombre: 'Jorge',
+        apellido: 'Vivas',
+        edad:30
+      }
+      //const cumpleanos = persona => persona.edad++//efecto secundarion modifica el const?
+      const cumpleanosInmutable = persona => ({
+        ...persona,
+        edad: persona.edad + 1
+      })
+    </script>
+  </body>
+</html>

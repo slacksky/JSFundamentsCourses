@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Clase 48 var, let, const</title>
+  </head>
+  <body>
+    <<script>
+      var jorge ={
+        nombre: 'jorge',
+        apellido: 'vivas',
+        edad: 30
+      }
+
+      function esMayorDeEdad(persona){
+        var mensaje
+        if(persona.edad>18){
+          mensaje = 'bebe y conduce conresponsabilidad'
+        }else{
+          mensaje = 'ni a beber ni aa tomar mu peque'
+        }
+        console.log(mensaje)
+      }
+      //esMayorDeEdad(jorge)
+      //var es mas global y js siempre la asigna asi se con undefined, indep de donde se declara
+      //let solo existe en bloque que la llama, cunado termina el bloque desaparece
+      //const funcion igual a let pere no se puede cambiar o reasignar
+      for(let i = 0; i< 10; i++){
+        console.log(i)
+      }
+      console.log(`for finalizado el valor de i es ${i}`)
+      //usar let si es posible (sobre var para que no se extienda o reassigne)
+      //si no cambia usar const sobre let
+    </script>
+  </body>
+</html>
